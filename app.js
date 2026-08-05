@@ -19,6 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ─── Live Menu Search Input (10,000 Customer Simulation) ──
+    const menuSearch = document.getElementById('menuSearch');
+    if (menuSearch) {
+        menuSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            menuItems.forEach(item => {
+                const title = item.querySelector('h4').textContent.toLowerCase();
+                const desc = item.querySelector('p').textContent.toLowerCase();
+                if (title.includes(query) || desc.includes(query)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // ─── Waiter Bell Notification Trigger ─────────────────────
+    const btnWaiter = document.getElementById('btnWaiter');
+    if (btnWaiter) {
+        btnWaiter.addEventListener('click', () => {
+            const tableNum = prompt("Lütfen Masa Numarasını Giriniz (Örn: Masa 12):", "Masa 12");
+            if (tableNum) {
+                alert("🔔 " + tableNum + " için garson çağrısı iletildi! Ekibimiz birazdan yanınızda olacaktır.");
+            }
+        });
+    }
+
     // ─── Online Masa Rezervasyonu WhatsApp Entegrasyonu ────────
     const resForm = document.getElementById('resForm');
     if (resForm) {

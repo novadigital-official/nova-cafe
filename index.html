@@ -149,6 +149,14 @@
             </div>
 
             <!-- Sticky Category Navigation Bar -->
+            <!-- INSTANT MENU SEARCH INPUT (10,000 CUSTOMER SIMULATION REQUEST) -->
+            <div class="menu-search-wrap" style="margin-top: 24px;">
+                <div class="search-input-box" style="position: relative; max-width: 500px; margin: 0 auto 20px;">
+                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #78716C; font-size: 1rem;"></i>
+                    <input type="text" id="menuSearch" placeholder="Menüde lezzet ara... (Örn: Bonfile, Tiramisu, Burger, Kahve)" style="width: 100%; padding: 14px 16px 14px 44px; border-radius: 30px; border: 1px solid #E7E5E4; background: white; font-family: inherit; font-size: 0.95rem; outline: none; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                </div>
+            </div>
+
             <div class="category-nav-bar">
                 <button class="cat-btn active" data-cat="all"><i class="fa-solid fa-utensils"></i> Tümü</button>
                 <button class="cat-btn" data-cat="kahvalti"><i class="fa-solid fa-egg"></i> Kahvaltı</button>
@@ -538,6 +546,23 @@
             </div>
         </div>
     </footer>
+
+    
+    <!-- FLOATING MOBILE BOTTOM ACTION DOCK (SIMULATION AUDIT RESULT) -->
+    <div class="mobile-bottom-dock" id="mobileDock">
+        <button class="dock-btn btn-waiter" id="btnWaiter"><i class="fa-solid fa-bell"></i> <span>Garson Çağır</span></button>
+        <a href="https://wa.me/905070871789?text=Merhaba,%20Masa%20numaram:%20__%20Sipari%C5%9F%20vermek%20istiyorum." target="_blank" rel="noopener noreferrer" class="dock-btn btn-order"><i class="fa-brands fa-whatsapp"></i> <span>Masa Siparişi</span></a>
+    </div>
+
+    <!-- DISH DETAIL MODAL -->
+    <div class="dish-modal" id="dishModal">
+        <div class="dish-modal-content">
+            <button class="dish-modal-close" id="dishModalClose">&times;</button>
+            <div class="dish-modal-body" id="dishModalBody">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
