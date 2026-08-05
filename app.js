@@ -1,51 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ─── Sticky Navbar Blur Scroll ────────────────────────────
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            navbar.style.padding = '12px 0';
-            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
-        } else {
-            navbar.style.padding = '16px 0';
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    // ─── Sticky Category Filter for QR Menu ───────────────────
+    const catBtns = document.querySelectorAll('.cat-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
 
-    // ─── Mobile Drawer ────────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileDrawer = document.getElementById('mobileDrawer');
-    const drawerClose = document.getElementById('drawerClose');
-
-    if (hamburger && mobileDrawer) {
-        hamburger.addEventListener('click', () => mobileDrawer.classList.add('active'));
-        if (drawerClose) drawerClose.addEventListener('click', () => mobileDrawer.classList.remove('active'));
-        
-        mobileDrawer.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileDrawer.classList.remove('active'));
-        });
-    }
-
-    // ─── Interactive Menu Tab Filters ────────────────────────
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const menuCards = document.querySelectorAll('.menu-card');
-
-    tabBtns.forEach(btn => {
+    catBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
+            catBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
-            const cat = btn.getAttribute('data-tab');
-            menuCards.forEach(card => {
-                if (cat === 'all' || card.getAttribute('data-category') === cat) {
-                    card.style.display = 'flex';
+
+            const cat = btn.getAttribute('data-cat');
+            menuItems.forEach(item => {
+                if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+                    item.style.display = 'flex';
                 } else {
-                    card.style.display = 'none';
+                    item.style.display = 'none';
                 }
             });
         });
     });
 
-    // ─── Online Reservation Form WhatsApp Trigger ─────────────
+    // ─── Online Masa Rezervasyonu WhatsApp Entegrasyonu ────────
     const resForm = document.getElementById('resForm');
     if (resForm) {
         resForm.addEventListener('submit', (e) => {
