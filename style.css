@@ -1,0 +1,567 @@
+/* ═══════════════════════════════════════════════════════════════
+   NOVA CAFE & BISTRO — STYLE.CSS (GASTRONOMY DESIGN SYSTEM)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+    --bg-dark: #0D1117;
+    --bg-card: #161B22;
+    --primary: #D97706; /* Warm Amber Gastronomy Accent */
+    --primary-hover: #B45309;
+    --text-light: #F8FAFC;
+    --text-muted: #94A3B8;
+    --border: #21262D;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.logo-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+}
+
+.logo-text span {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border-color: #25D366;
+    color: #25D366;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #25D366;
+    color: white;
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    padding: 180px 0 100px;
+    background: url('images/hero.jpg') center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(13,17,23,0.85) 0%, rgba(13,17,23,0.95) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 780px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(217, 119, 6, 0.15);
+    color: var(--primary);
+    border: 1px solid rgba(217, 119, 6, 0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    max-width: 640px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.hero-features {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+}
+
+.feat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.feat-item i {
+    color: var(--primary);
+}
+
+/* INFO STRIP */
+.info-strip {
+    background: var(--bg-card);
+    border-y: 1px solid var(--border);
+    padding: 32px 0;
+}
+
+.strip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.strip-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.strip-card i {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(217, 119, 6, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.strip-card strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.strip-card span {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    margin-bottom: 48px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sub-title {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.section-title p {
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* MENU TABS & GRID */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+.menu-item-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.menu-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.menu-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.badge-new {
+    background: #10B981;
+}
+
+.menu-info {
+    padding: 24px;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.menu-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.menu-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* RESERVATION */
+.reservation-section {
+    background: #12171F;
+    border-y: 1px solid var(--border);
+}
+
+.res-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 48px;
+    align-items: center;
+}
+
+.res-info h2 {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    margin: 12px 0;
+}
+
+.res-info p {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.res-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rh-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.rh-item i {
+    color: var(--primary);
+}
+
+.res-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 36px;
+    border-radius: 20px;
+}
+
+.res-form-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    background: #0D1117;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* FOOTER */
+.footer {
+    padding: 60px 0 30px;
+    background: var(--bg-dark);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-brand h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+.footer-badge-box {
+    margin-bottom: 30px;
+}
+
+.nova-signature {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 99, 235, 0.1);
+    color: #3B82F6;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.footer-copy {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero { padding-top: 14px 0 60px; text-align: center; }
+    .hero-content { margin: 0 auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-features { justify-content: center; }
+}
