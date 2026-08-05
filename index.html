@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Cafe & Restoran | Lezzetin ve Modern Gastronominin Buluşma Noktası</title>
-    <meta name="description" content="Nova Cafe & Restoran - Taze içerikler, özel şef menüsü, zengin kahve çeşitleri ve atmosferik ortam. Online masa rezervasyonu ve dijital menü.">
+    <title>Nova Cafe & Bistro | Lezzetin ve Modern Gastronominin Buluşma Noktası</title>
+    <meta name="description" content="Nova Cafe & Bistro — Usta şef menüsü, organik taze malzemeler, şık atmosfer, online masa rezervasyonu ve dijital menü altyapısı.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -18,227 +18,367 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
+    <!-- STICKY NAVBAR -->
+    <header class="navbar" id="navbar">
         <div class="container nav-wrap">
             <a href="#" class="logo">
                 <span class="logo-mark"><i class="fa-solid fa-utensils"></i></span>
-                <span class="logo-text">NOVA <span>CAFE & BISTRO</span></span>
+                <div class="logo-title">
+                    <span class="brand-name">NOVA</span>
+                    <span class="brand-sub">CAFE & BISTRO</span>
+                </div>
             </a>
 
-            <nav class="nav-links">
-                <a href="#menu">Menümüz</a>
-                <a href="#hakkimizda">Hikayemiz</a>
-                <a href="#rezervasyon">Rezervasyon</a>
-                <a href="#iletisim">İletişim</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Ana Sayfa</a>
+                <a href="#menu" class="nav-link">Dijital Menü</a>
+                <a href="#hakkimizda" class="nav-link">Hikayemiz</a>
+                <a href="#spesiyaller" class="nav-link">Şefin Spesiyalleri</a>
+                <a href="#rezervasyon" class="nav-link">Rezervasyon</a>
+                <a href="#iletisim" class="nav-link">İletişim</a>
             </nav>
 
             <div class="nav-actions">
-                <a href="https://wa.me/905070871789?text=Merhaba,%20Nova%20Cafe'den%20sipari%C5%9F%20vermek%20istiyorum." target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp Sipariş</a>
-                <a href="#rezervasyon" class="btn btn-primary">Masa Rezerve Et</a>
+                <a href="https://wa.me/905070871789?text=Merhaba,%20Nova%20Cafe'den%20sipari%C5%9F%20vermek%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> <span>Hızlı Sipariş</span></a>
+                <a href="#rezervasyon" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> <span>Masa Rezerve Et</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Menü"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="badge"><i class="fa-solid fa-star"></i> Eşsiz Gastronomi Deneyimi</span>
-            <h1>Lezzetin ve <span class="highlight">Estetiğin</span> Buluşma Noktası.</h1>
-            <p>Taze malzemelerle hazırlanan usta şef menümüz, nitelikli kahve seçkimiz ve büyüleyici atmosferimizle sizleri bekliyoruz.</p>
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <span class="brand-name">NOVA CAFE</span>
+            <button class="drawer-close" id="drawerClose">&times;</button>
+        </div>
+        <div class="drawer-links">
+            <a href="#hero">Ana Sayfa</a>
+            <a href="#menu">Dijital Menü</a>
+            <a href="#hakkimizda">Hikayemiz</a>
+            <a href="#spesiyaller">Şefin Spesiyalleri</a>
+            <a href="#rezervasyon">Rezervasyon</a>
+            <a href="#iletisim">İletişim</a>
+        </div>
+        <div class="drawer-footer">
+            <a href="#rezervasyon" class="btn btn-primary btn-block">Masa Rezerve Et</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-backdrop"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <span class="pill-badge"><i class="fa-solid fa-sparkles"></i> Eşsiz Gastronomi & Artisanal Kahve</span>
+            </div>
+            <h1>Damakta İz Bırakan <span class="text-gradient">Lezzetler</span> & Büyüleyici Atmosfer.</h1>
+            <p class="hero-desc">Taze mevsimlik malzemeler, usta şef dokunuşları ve gurme lezzet seçkimizle sevdiklerinizle unutulmaz anlar yaşayın.</p>
             
-            <div class="hero-buttons">
+            <div class="hero-cta-group">
                 <a href="#menu" class="btn btn-primary btn-lg"><i class="fa-solid fa-book-open"></i> Dijital Menüyü İncele</a>
                 <a href="#rezervasyon" class="btn btn-glass btn-lg"><i class="fa-regular fa-calendar-check"></i> Online Masa Rezerve Et</a>
             </div>
 
-            <div class="hero-features">
-                <div class="feat-item"><i class="fa-solid fa-seedling"></i> <span>%100 Taze & Organik</span></div>
-                <div class="feat-item"><i class="fa-solid fa-fire-burner"></i> <span>Özel Şef Tarifleri</span></div>
-                <div class="feat-item"><i class="fa-solid fa-mug-hot"></i> <span>Artisanal Kahve</span></div>
+            <div class="hero-stats-bar">
+                <div class="stat-pill"><i class="fa-solid fa-leaf"></i> <span>%100 Taze & Organik</span></div>
+                <div class="stat-pill"><i class="fa-solid fa-fire-burner"></i> <span>Özel Şef Tarifleri</span></div>
+                <div class="stat-pill"><i class="fa-solid fa-mug-hot"></i> <span>Nitelikli Kahve</span></div>
+                <div class="stat-pill"><i class="fa-solid fa-star"></i> <span>4.9 / 5 Misafir Puanı</span></div>
             </div>
         </div>
     </section>
 
     <!-- HIZLI BİLGİ ŞERİDİ -->
     <section class="info-strip">
-        <div class="container strip-grid">
-            <div class="strip-card">
-                <i class="fa-regular fa-clock"></i>
-                <div>
+        <div class="container strip-wrap">
+            <div class="strip-item">
+                <div class="strip-icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="strip-text">
                     <strong>Çalışma Saatleri</strong>
                     <span>Her Gün: 08:30 - 23:30</span>
                 </div>
             </div>
-            <div class="strip-card">
-                <i class="fa-solid fa-location-dot"></i>
-                <div>
+            <div class="strip-item">
+                <div class="strip-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="strip-text">
                     <strong>Merkezi Konum</strong>
                     <span>Atatürk Bulvarı No: 142/A</span>
                 </div>
             </div>
-            <div class="strip-card">
-                <i class="fa-solid fa-phone"></i>
-                <div>
+            <div class="strip-item">
+                <div class="strip-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="strip-text">
                     <strong>Hızlı Rezervasyon</strong>
-                    <span>+90 (507) 087 17 89</span>
+                    <span>0507 087 17 89</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MENÜ -->
+    <!-- ŞEFİN SPESİYALLERİ SHOWCASE -->
+    <section class="section specials-section" id="spesiyaller">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="sub-badge">Gurme Seçki</span>
+                <h2>Şefin Öne Çıkan <span class="text-gradient">Spesiyalleri</span></h2>
+                <p>Mutfak ekibimizin en sevilen ve imza lezzetlerini keşfedin.</p>
+            </div>
+
+            <div class="specials-grid">
+                <div class="special-card">
+                    <div class="special-img-wrap">
+                        <img src="images/dish.jpg" alt="Trüflü Dana Bonfile" width="400" height="260" loading="lazy">
+                        <span class="special-tag">Şefin İmzası</span>
+                    </div>
+                    <div class="special-content">
+                        <div class="special-header">
+                            <h3>Trüflü Dana Bonfile</h3>
+                            <span class="special-price">480 ₺</span>
+                        </div>
+                        <p>Taze rozmarin ile marine edilmiş 250gr bonfile, yabani trüf sosu, sotelenmiş kuşkonmaz ve kremsi patates püre.</p>
+                        <a href="#rezervasyon" class="btn btn-sm btn-outline">Masa Rezerve Et</a>
+                    </div>
+                </div>
+
+                <div class="special-card">
+                    <div class="special-img-wrap">
+                        <img src="images/dessert.jpg" alt="Altın Yapraklı Çikolata Fondan" width="400" height="260" loading="lazy">
+                        <span class="special-tag badge-gold">En Çok Tercih Edilen</span>
+                    </div>
+                    <div class="special-content">
+                        <div class="special-header">
+                            <h3>Altın Yapraklı Çikolata Fondan</h3>
+                            <span class="special-price">220 ₺</span>
+                        </div>
+                        <p>Belçika çikolatalı akışkan kek, Madagascar çubuk vanilyalı gelato ve 24k yenilebilir altın yaprağı dokunuşu.</p>
+                        <a href="#rezervasyon" class="btn btn-sm btn-outline">Masa Rezerve Et</a>
+                    </div>
+                </div>
+
+                <div class="special-card">
+                    <div class="special-img-wrap">
+                        <img src="images/cocktail.jpg" alt="Smoked Rosemary Kokteyl" width="400" height="260" loading="lazy">
+                        <span class="special-tag badge-dark">İmza İçecek</span>
+                    </div>
+                    <div class="special-content">
+                        <div class="special-header">
+                            <h3>Smoked Rosemary Espresso</h3>
+                            <span class="special-price">190 ₺</span>
+                        </div>
+                        <p>Nitelikli espresso çekirdekleri, tütsülenmiş taze biberiye aroması ve esmer şeker şurubu karışımı.</p>
+                        <a href="#rezervasyon" class="btn btn-sm btn-outline">Masa Rezerve Et</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DİJİTAL QR MENÜ -->
     <section class="section menu-section" id="menu">
         <div class="container">
             <div class="section-title text-center">
-                <span class="sub-title">Seçkin Lezzetler</span>
-                <h2>Özel Şef <span class="highlight">Menümüz</span></h2>
-                <p>Usta ellerden çıkan başlangıçlar, gurme ana yemekler ve enfes tatlılar.</p>
+                <span class="sub-badge">Lezzet Kataloğu</span>
+                <h2>Dijital Yemek & İçecek <span class="text-gradient">Menümüz</span></h2>
+                <p>Kategorilere göre filtrelenmiş taze yemek ve içecek menümüzü inceleyin.</p>
             </div>
 
             <div class="menu-tabs">
-                <button class="tab-btn active" data-tab="ana-yemek">Ana Yemekler</button>
+                <button class="tab-btn active" data-tab="all">Tümü</button>
+                <button class="tab-btn" data-tab="ana-yemek">Ana Yemekler</button>
                 <button class="tab-btn" data-tab="baslangic">Başlangıçlar</button>
                 <button class="tab-btn" data-tab="tatli">Tatlılar</button>
-                <button class="tab-btn" data-tab="icecek">İçecekler & Kahve</button>
+                <button class="tab-btn" data-tab="icecek">Artisanal Kahve & İçecek</button>
             </div>
 
             <div class="menu-grid" id="menuGrid">
-                <!-- Ürün 1 -->
-                <div class="menu-item-card" data-category="ana-yemek">
-                    <div class="menu-img-wrap">
-                        <img src="images/dish.jpg" alt="Trüflü Dana Biftek" width="400" height="250" loading="lazy">
-                        <span class="item-badge">Şefin Tavsiyesi</span>
+                <!-- 1 -->
+                <div class="menu-card" data-category="ana-yemek">
+                    <div class="menu-thumb">
+                        <img src="images/dish.jpg" alt="Trüflü Bonfile" width="300" height="200" loading="lazy">
                     </div>
-                    <div class="menu-info">
-                        <div class="menu-header">
-                            <h3>Trüflü Dana Biftek</h3>
-                            <span class="price">480 ₺</span>
+                    <div class="menu-details">
+                        <div class="menu-title-row">
+                            <h3>Trüflü Dana Bonfile</h3>
+                            <span class="price-tag">480 ₺</span>
                         </div>
-                        <p>Rozmarin ile marine edilmiş 250gr dana bonfile, trüf mantarı sosu, taze kuşkonmaz ve fırınlanmış patates püre ile.</p>
+                        <p>Rozmarin marine bonfile, trüf sosu, sotelenmiş kuşkonmaz.</p>
+                        <span class="menu-calorie"><i class="fa-solid fa-fire"></i> 650 kcal</span>
                     </div>
                 </div>
 
-                <!-- Ürün 2 -->
-                <div class="menu-item-card" data-category="ana-yemek">
-                    <div class="menu-img-wrap">
-                        <img src="images/hero.jpg" alt="Somon Izgara" width="400" height="250" loading="lazy">
+                <!-- 2 -->
+                <div class="menu-card" data-category="ana-yemek">
+                    <div class="menu-thumb">
+                        <img src="images/hero.jpg" alt="Izgara Somon Steak" width="300" height="200" loading="lazy">
                     </div>
-                    <div class="menu-info">
-                        <div class="menu-header">
+                    <div class="menu-details">
+                        <div class="menu-title-row">
                             <h3>Izgara Somon Steak</h3>
-                            <span class="price">420 ₺</span>
+                            <span class="price-tag">420 ₺</span>
                         </div>
-                        <p>Norveç somon bonfile, limonlu otlu tereyağı, roka salatası ve kinoa yatağında servis edilir.</p>
+                        <p>Norveç somon bonfile, limonlu tereyağı ve kinoa salatası.</p>
+                        <span class="menu-calorie"><i class="fa-solid fa-fire"></i> 520 kcal</span>
                     </div>
                 </div>
 
-                <!-- Ürün 3 -->
-                <div class="menu-item-card" data-category="ana-yemek">
-                    <div class="menu-img-wrap">
-                        <img src="images/dish.jpg" alt="Taze İtalyan Makarnası" width="400" height="250" loading="lazy">
-                        <span class="item-badge badge-new">Yeni</span>
+                <!-- 3 -->
+                <div class="menu-card" data-category="tatli">
+                    <div class="menu-thumb">
+                        <img src="images/dessert.jpg" alt="Çikolatalı Fondan" width="300" height="200" loading="lazy">
                     </div>
-                    <div class="menu-info">
-                        <div class="menu-header">
-                            <h3>Porçini Mantarlı Tagliatelle</h3>
-                            <span class="price">320 ₺</span>
+                    <div class="menu-details">
+                        <div class="menu-title-row">
+                            <h3>Çikolatalı Sıcak Fondan</h3>
+                            <span class="price-tag">220 ₺</span>
                         </div>
-                        <p>El yapımı taze makarna, yabani porçini mantarları, parmesan tekeri kreması ve taze fesleğen.</p>
+                        <p>Belçika çikolatalı kek ve vanilyalı artisan dondurma.</p>
+                        <span class="menu-calorie"><i class="fa-solid fa-fire"></i> 440 kcal</span>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="menu-card" data-category="icecek">
+                    <div class="menu-thumb">
+                        <img src="images/cocktail.jpg" alt="Smoked Rosemary Espresso" width="300" height="200" loading="lazy">
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-title-row">
+                            <h3>Smoked Rosemary Espresso</h3>
+                            <span class="price-tag">190 ₺</span>
+                        </div>
+                        <p>Tütsülenmiş biberiye ve nitelikli Etiyopya espressosu.</p>
+                        <span class="menu-calorie"><i class="fa-solid fa-fire"></i> 120 kcal</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REZERVASYON -->
-    <section class="section reservation-section" id="rezervasyon">
-        <div class="container res-container">
-            <div class="res-info">
-                <span class="sub-title">Masınızı Garantiye Alın</span>
-                <h2>Online Masa <span class="highlight">Rezervasyonu</span></h2>
-                <p>Özel günleriniz, iş yemekleriniz ve sevdiklerinizle geçireceğiniz unutulmaz anlar için masanızı 30 saniyede rezerve edin.</p>
+    <!-- HAKKIMIZDA & MUTFAK FELSEFEMİZ -->
+    <section class="section about-section" id="hakkimizda">
+        <div class="container about-grid">
+            <div class="about-image-stack">
+                <img src="images/hero.jpg" alt="Nova Cafe İç Mekan" class="img-main" width="500" height="350" loading="lazy">
+            </div>
+            <div class="about-text">
+                <span class="sub-badge">Gastronomi Tutkumuz</span>
+                <h2>Sadece Bir Yemek Değil, <span class="text-gradient">Bir Deneyim.</span></h2>
+                <p>Nova Cafe & Bistro olarak, her gün yerel üreticilerden aldığımız en taze organik malzemeleri usta şeflerimizin vizyonuyla buluşturuyoruz.</p>
                 
-                <div class="res-highlights">
-                    <div class="rh-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Anında WhatsApp Teyidi</span>
+                <div class="about-values">
+                    <div class="val-card">
+                        <i class="fa-solid fa-seedling"></i>
+                        <div>
+                            <strong>Doğal & Taze İçerik</strong>
+                            <span>Günübirlik temin edilen taze sebze ve etler.</span>
+                        </div>
                     </div>
-                    <div class="rh-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Özel Masa Tercihi (İç/Dış Mekan)</span>
-                    </div>
-                    <div class="rh-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Ücretsiz İptal & Değişiklik</span>
+                    <div class="val-card">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <strong>Usta Şef Kadrosu</strong>
+                            <span>Uluslararası deneyimli gastronomi ekibi.</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="res-form-card">
-                <h3>Rezervasyon Formu</h3>
+    <!-- REZERVASYON WIZARD -->
+    <section class="section res-section" id="rezervasyon">
+        <div class="container res-wrap">
+            <div class="res-intro">
+                <span class="sub-badge">Masanızı Garantiye Alın</span>
+                <h2>Online Masa <span class="text-gradient">Rezervasyonu</span></h2>
+                <p>30 saniye içinde masanızı rezerve edin, anında WhatsApp teyidi alın.</p>
+                
+                <div class="res-perks">
+                    <div class="perk"><i class="fa-solid fa-circle-check"></i> Anında Konfirmasyon</div>
+                    <div class="perk"><i class="fa-solid fa-circle-check"></i> Özel Masa Seçim Tercihi</div>
+                    <div class="perk"><i class="fa-solid fa-circle-check"></i> Sıfır İptal Ücreti</div>
+                </div>
+            </div>
+
+            <div class="res-card">
                 <form id="resForm">
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div class="form-grid">
+                        <div class="input-group">
                             <label>Adınız Soyadınız *</label>
-                            <input type="text" id="resName" placeholder="Örn: Ahmet Yılmaz" required>
+                            <input type="text" id="rName" placeholder="Örn: Ahmet Yılmaz" required>
                         </div>
-                        <div class="form-group">
+                        <div class="input-group">
                             <label>Telefon Numarası *</label>
-                            <input type="tel" id="resPhone" placeholder="05XX XXX XX XX" required>
+                            <input type="tel" id="rPhone" placeholder="05XX XXX XX XX" required>
                         </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
+                        <div class="input-group">
                             <label>Tarih *</label>
-                            <input type="date" id="resDate" required>
+                            <input type="date" id="rDate" required>
                         </div>
-                        <div class="form-group">
+                        <div class="input-group">
                             <label>Saat *</label>
-                            <select id="resTime" required>
-                                <option value="12:00">12:00 (Öğle Yemeği)</option>
+                            <select id="rTime" required>
+                                <option value="12:30">12:30 (Öğle Yemeği)</option>
                                 <option value="14:00">14:00</option>
-                                <option value="18:30">18:30 (Akşam Yemeği)</option>
-                                <option value="20:00" selected>20:00</option>
-                                <option value="21:30">21:30</option>
+                                <option value="19:00">19:00 (Akşam Yemeği)</option>
+                                <option value="20:30" selected>20:30 (Akşam Yemeği)</option>
+                                <option value="22:00">22:00</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-group" style="margin-top: 16px;">
                         <label>Kişi Sayısı *</label>
-                        <select id="resGuests" required>
-                            <option value="2 Kişi">2 Kişilik Masa</option>
-                            <option value="4 Kişi" selected>4 Kişilik Masa</option>
-                            <option value="6 Kişi">6 Kişilik Masa</option>
-                            <option value="8+ Kişi (Grup)">8+ Kişi (Grup Rezervasyonu)</option>
+                        <select id="rGuests" required>
+                            <option value="2 Kişilik Masa">2 Kişilik Masa</option>
+                            <option value="4 Kişilik Masa" selected>4 Kişilik Masa</option>
+                            <option value="6 Kişilik Masa">6 Kişilik Masa</option>
+                            <option value="8+ Kişi (Grup Masa)">8+ Kişi (Grup Masa)</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-calendar-check"></i> Rezervasyonu Onayla</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 24px;">
+                        <i class="fa-solid fa-calendar-check"></i> Rezervasyonu Tamamla & WhatsApp Teyit Et
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER & NOVA DIGITAL SIGNATURE -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h3>NOVA CAFE & BISTRO</h3>
-                <p>Gastronomi ve tutkunun buluştuğu lezzet durağınız.</p>
+    <!-- İLETİŞİM & FOOTER -->
+    <footer class="footer" id="iletisim">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <span class="logo-mark"><i class="fa-solid fa-utensils"></i></span>
+                    <span class="brand-name">NOVA CAFE</span>
+                </div>
+                <p style="margin-top: 12px; color: var(--text-muted);">Gastronomi, tutku ve estetiğin buluştuğu özel mekanınız.</p>
             </div>
-            
-            <div class="footer-badge-box">
-                <span class="nova-signature">
+
+            <div class="footer-col">
+                <h4>Hızlı Bağlantılar</h4>
+                <ul>
+                    <li><a href="#menu">Dijital Menü</a></li>
+                    <li><a href="#spesiyaller">Spesiyaller</a></li>
+                    <li><a href="#rezervasyon">Rezervasyon</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>İletişim & Adres</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Atatürk Bulvarı No: 142/A, Türkiye</p>
+                <p><i class="fa-solid fa-phone"></i> 0507 087 17 89</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-wrap">
+                <span>&copy; 2026 Nova Cafe & Bistro. Tüm hakları saklıdır.</span>
+                <span class="signature-pill">
                     <i class="fa-solid fa-code"></i> Bu web altyapısı <strong>Nova Digital Standart Paket (4.999 TL)</strong> ile 2 günde yayına alınmıştır.
                 </span>
-            </div>
-            
-            <div class="footer-copy">
-                &copy; 2026 Nova Cafe & Restoran. Tüm hakları saklıdır.
             </div>
         </div>
     </footer>
