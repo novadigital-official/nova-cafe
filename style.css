@@ -535,3 +535,19 @@ html, body {
     .menu-item { padding: 14px !important; gap: 14px !important; }
     .menu-item img { width: 84px !important; height: 84px !important; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   BIGCHEFS / HAPPY MOON'S AUTHENTIC GASTRONOMY LEGEND CSS
+   ═══════════════════════════════════════════════════════════════ */
+
+.allergen-legend-bar span {
+    background: white;
+    border: 1px solid #E7E5E4;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
